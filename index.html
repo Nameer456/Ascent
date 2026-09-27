@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine Ascents — The Complete Guide to Mountaineering & Expeditions</title>
+  <meta name="description"
+    content="A dynamic single-page guide and expedition platform for mountaineering: history, styles, techniques, sheltering, hazards, records, worldwide clubs, elevation charts, and booking.">
+  <meta name="keywords"
+    content="mountaineering, climbing, Karakoram, Himalaya, K2, Everest, alpine expeditions, climbing techniques">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ================= 25. TOP SCROLL PROGRESS BAR ================= -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= 13. PRELOADER ANIMATION ================= -->
+  <div id="preloader" role="status" aria-live="polite">
+    <svg class="preloader-mountain" viewBox="0 0 48 32" aria-hidden="true">
+      <polyline points="1,30 12,10 18,19 27,4 47,30" fill="none" stroke="#ff7a00" stroke-width="3"
+        stroke-linejoin="round" stroke-linecap="round" />
+      <polyline points="18,19 21,14.5 24,19" fill="none" stroke="#ff315b" stroke-width="2.5" stroke-linejoin="round"
+        stroke-linecap="round" />
+    </svg>
+    <div class="preloader-spinner"></div>
+    <div class="preloader-text">Summits Await • Loading Alpine Ascents</div>
+  </div>
+
+  <!-- ================= 24. TOAST NOTIFICATION CONTAINER ================= -->
+  <div id="toastContainer" aria-live="assertive"></div>
+
+  <!-- ================= SKIP LINK ================= -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= 11. STICKY NAVBAR ================= -->
+  <header class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu"
+        aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-brand-group">
+        <a href="#Home" class="brand" aria-label="Alpine Ascents, Home">
+          <svg class="brand-mark" viewBox="0 0 48 32" width="34" height="24" aria-hidden="true">
+            <polyline points="1,30 12,10 18,19 27,4 47,30" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linejoin="round" stroke-linecap="round" />
+            <polyline points="18,19 21,14.5 24,19" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linejoin="round" stroke-linecap="round" opacity="0.6" />
+          </svg>
+          <span class="brand-word">Alpine&nbsp;Ascents</span>
+        </a>
+
+        <!-- ================= 2. VISITOR COUNTER (Logo ke saath) ================= -->
+        <div class="visitor-counter-badge" id="visitorBadge" title="Live Simulated Visitor Counter">
+          <i class="fa-solid fa-users"></i>
+          <span>VISITORS:</span>
+          <span class="visitor-count-number" id="visitorNumber">0</span>
+        </div>
+      </div>
+
+      <!-- 3 & 4. MENU WITH HOVER, ACTIVE HIGHLIGHT & DROPDOWNS -->
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-a">
+          <a href="#Home" class="nav-link active">Home</a>
+
+          <!-- Dropdown for SPA Knowledge Sections -->
+          <div class="nav-dropdown" id="knowledgeDropdown">
+            <a href="#spaSection" class="nav-link">Guide <i class="fa-solid fa-chevron-down"
+                style="font-size:9px;margin-left:3px;"></i></a>
+            <div class="nav-dropdown-menu">
+              <a href="#spaSection" data-spa-target="history"><i class="fa-solid fa-landmark"></i> Mountain History</a>
+              <a href="#spaSection" data-spa-target="types"><i class="fa-solid fa-person-hiking"></i> Climbing
+                Styles</a>
+              <a href="#spaSection" data-spa-target="techniques"><i class="fa-solid fa-shoe-prints"></i> Techniques</a>
+              <a href="#spaSection" data-spa-target="sheltering"><i class="fa-solid fa-tents"></i> High Shelters</a>
+              <a href="#spaSection" data-spa-target="hazards"><i class="fa-solid fa-triangle-exclamation"></i> Objective
+                Hazards</a>
+            </div>
+          </div>
+
+          <!-- <a href="#elevationChartSection" class="nav-link">Peaks Chart</a> -->
+          <!-- <a href="#clubs" class="nav-link">Clubs Map</a> -->
+          <!-- <a href="#records" class="nav-link">Records</a> -->
+          <!-- <a href="#comparisonSection" class="nav-link">Routes</a> -->
+          <a href="#packagesSection" class="nav-link">Packages</a>
+          <!-- <a href="#gallery" class="nav-link">Gallery</a> -->
+          <!-- <a href="#faqSection" class="nav-link">Guidelines</a> -->
+          <a href="#reviewsSection" class="nav-link">Reviews</a>
+          <a href="#trip-planner" class="nav-link">Trip Planner</a>
+        </div>
+      </nav>
+
+      <!-- 22. MULTI-STEP BOOKING TRIGGER & 26. THEME TOGGLE -->
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button type="button" class="btn btn-primary js-open-wizard" id="navBookNowBtn">
+          Book Expedition <i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i>
+        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"
+          title="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= 15. PARALLAX HERO SECTION & 17. EXPEDITION COUNTDOWN ================= -->
+    <section class="hero" id="Home">
+      <div class="hero-media hero-parallax-layer" id="heroMedia">
+        <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="images/2.jpg"
+          aria-hidden="true">
+          <source src="https://videos.pexels.com/video-files/12202611/12202611-uhd_2560_1440_30fps.mp4"
+            type="video/mp4">
+        </video>
+        <img src="images/2.jpg" alt="Alpine Mountain Sunset" class="hero-fallback-image">
+        <div class="hero-scrim"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow"><i class="fa-solid fa-compass" style="color:var(--orange);"></i> Every Peak Tells A
+          Story</p>
+        <h1 class="hero-title">
+          <span class="line">CLIMB</span>
+          <span class="line1">BEYOND LIMITS</span>
+          <span class="accent">Adventure begins where the road ends.</span>
+        </h1>
+        <p class="hero-sub">
+          Explore high-altitude expeditions, technical progression, objective hazards, and worldwide mountaineering
+          heritage with Alpine Ascents.
+        </p>
+
+        <div class="hero-actions hero-actions-animated">
+          <button type="button" class="btn btn-primary js-open-wizard">
+            <i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i> Book Your Climb
+          </button>
+          <a href="#elevationChartSection" class="btn btn-ghost">
+            <i class="fa-solid fa-chart-simple" style="margin-right:8px;"></i> View Peaks Chart
+          </a>
+          <a href="#gallery" class="btn btn-ghost">
+            <i class="fa-solid fa-play" style="margin-right:8px;"></i> Watch Field Footage
+          </a>
+        </div>
+
+        <!-- 17. EXPEDITION COUNTDOWN TIMER BADGE -->
+        <div class="expedition-countdown-card" id="expeditionCountdown">
+          <div class="countdown-header">
+            <span class="countdown-badge"><i class="fa-solid fa-fire"></i> Upcoming Expedition</span>
+            <h4 class="countdown-title" id="countdownTargetName">K2 Basecamp & Gondogoro La</h4>
+          </div>
+          <div class="countdown-digits">
+            <div class="countdown-box"><span class="countdown-number" id="countDays">00</span><span
+                class="countdown-label">Days</span></div>
+            <div class="countdown-box"><span class="countdown-number" id="countHours">00</span><span
+                class="countdown-label">Hours</span></div>
+            <div class="countdown-box"><span class="countdown-number" id="countMins">00</span><span
+                class="countdown-label">Mins</span></div>
+            <div class="countdown-box"><span class="countdown-number" id="countSecs">00</span><span
+                class="countdown-label">Secs</span></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#About" class="scroll-cue" aria-label="Scroll down to content"><span></span></a>
+    </section>
+
+    <!-- ================= ABOUT / MISSION ================= -->
+    <section class="section intro" id="About">
+      <div class="wrap intro-grid">
+        <div class="intro-copy reveal">
+          <h2 class="eyebrow-label">About Alpine Ascents</h2>
+          <p class="lede">
+            Dedicated to providing uncompromising safety standards, route intelligence, technical mastery, and authentic
+            expeditions across the greatest mountain ranges on Earth.
+          </p>
+          <p>
+            Mountaineering is not about conquering peaks, but conquering ourselves. Whether mastering <span
+              class="term-tooltip" data-tooltip="Tied into a common safety line with dynamic kernmantle rope.">roped
+              travel<span class="tooltip-box">Tied into a common safety line with dynamic kernmantle rope.</span></span>
+            or negotiating a <span class="term-tooltip"
+              data-tooltip="Massive pinnacle or tower of glacial ice prone to sudden collapse.">serac<span
+                class="tooltip-box">Massive pinnacle or tower of glacial ice prone to sudden collapse.</span></span>
+            barrier, our mission is to return every climber home safely.
+          </p>
+        </div>
+        <div class="intro-stats reveal">
+          <div class="stat"><span class="stat-num count-up" data-target="32">32</span><span class="stat-label">Years
+              Guiding Expeditions</span></div>
+          <div class="stat"><span class="stat-num count-up" data-target="7">7</span><span class="stat-label">Continents
+              Climbed</span></div>
+          <div class="stat"><span class="stat-num count-up" data-target="100" data-suffix="%">0%</span><span class="stat-label">Safety & Turnaround
+              Priority</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4 & 5. JSON-DRIVEN SPA DYNAMIC CONTENT (History, Types, Techniques, Sheltering, Hazards) ================= -->
+    <section class="section spa-section" id="spaSection">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-book-open"></i> Complete Mountaineering Compendium</span>
+          <h2 class="section-head">Alpine <span>Knowledge Base</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Explore essential mountain knowledge powered dynamically via JSON. Click any discipline below to switch
+            seamlessly without page reload.
+          </p>
+        </div>
+
+        <!-- SPA Nav Tabs -->
+        <div class="spa-nav-tabs reveal" role="tablist" aria-label="Mountaineering Disciplines">
+          <button type="button" class="spa-tab-btn active" data-tab="history" role="tab" aria-selected="true">
+            <i class="fa-solid fa-landmark"></i> History
+          </button>
+          <button type="button" class="spa-tab-btn" data-tab="types" role="tab" aria-selected="false">
+            <i class="fa-solid fa-person-hiking"></i> Climbing Styles
+          </button>
+          <button type="button" class="spa-tab-btn" data-tab="techniques" role="tab" aria-selected="false">
+            <i class="fa-solid fa-shoe-prints"></i> Techniques
+          </button>
+          <button type="button" class="spa-tab-btn" data-tab="sheltering" role="tab" aria-selected="false">
+            <i class="fa-solid fa-tents"></i> Sheltering
+          </button>
+          <button type="button" class="spa-tab-btn" data-tab="hazards" role="tab" aria-selected="false">
+            <i class="fa-solid fa-triangle-exclamation"></i> Hazards
+          </button>
+        </div>
+
+        <!-- SPA Dynamic Content Container -->
+        <div class="spa-content-container" id="spaContentContainer">
+          <!-- 29. SKELETON PLACEHOLDER (Replaced once JSON loads) -->
+          <div class="spa-skeleton-loading" id="spaSkeleton">
+            <div class="skeleton" style="height:32px;width:40%;margin-bottom:15px;"></div>
+            <div class="skeleton" style="height:18px;width:70%;margin-bottom:30px;"></div>
+            <div class="spa-cards-grid">
+              <div class="skeleton skeleton-card"></div>
+              <div class="skeleton skeleton-card"></div>
+              <div class="skeleton skeleton-card"></div>
+            </div>
+          </div>
+
+          <!-- Render Target for Tab Content -->
+          <div class="spa-content-pane active" id="spaPaneHistory" role="tabpanel"></div>
+          <div class="spa-content-pane" id="spaPaneTypes" role="tabpanel"></div>
+          <div class="spa-content-pane" id="spaPaneTechniques" role="tabpanel"></div>
+          <div class="spa-content-pane" id="spaPaneSheltering" role="tabpanel"></div>
+          <div class="spa-content-pane" id="spaPaneHazards" role="tabpanel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 16. INTERACTIVE ELEVATION & DIFFICULTY CHART (Chart.js) ================= -->
+    <section class="section elevation-section" id="elevationChartSection">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-chart-simple"></i> Data & Analytics</span>
+          <h2 class="section-head">Peak Elevation <span>&amp; Technical Difficulty</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Interactive comparison of the world's most formidable summits loaded dynamically from <code
+              style="color:var(--orange);">mountains.json</code>. Click any bar to inspect peak intelligence.
+          </p>
+        </div>
+
+        <div class="chart-container-box reveal">
+          <div class="chart-wrapper">
+            <canvas id="elevationChart" aria-label="Mountaineering elevation and difficulty chart" role="img"></canvas>
+          </div>
+
+          <!-- Peak Inspection Card -->
+          <div class="peak-detail-card" id="peakInspectCard">
+            <div class="peak-detail-info">
+              <h4 id="inspectPeakName">K2 (Savage Mountain)</h4>
+              <p id="inspectPeakRange">Range: Karakoram • Pakistan / China</p>
+              <p id="inspectPeakHighlight" style="margin-top:6px;color:#cbd5e1;">Steep technical climbing, Bottleneck
+                serac, severe storms</p>
+            </div>
+            <div class="peak-stats-badges">
+              <div class="peak-badge">
+                <strong id="inspectPeakHeight">8,611 m</strong>
+                <span>Elevation</span>
+              </div>
+              <div class="peak-badge">
+                <strong id="inspectPeakDiff">9.9 / 10</strong>
+                <span>Difficulty</span>
+              </div>
+              <div class="peak-badge">
+                <strong id="inspectPeakDeath">23.2%</strong>
+                <span>Fatality Ratio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. GEOLOCATION API & MAP (ORGANIZATIONS / CLUBS) ================= -->
+    <section class="section alt" id="clubs">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-earth-americas"></i> Global Community</span>
+          <h2 class="section-head">Mountaineering Clubs <span>Worldwide</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Federations and historic clubs managing permits, route libraries, and alpine huts. Markers rendered
+            dynamically from <code style="color:var(--orange);">organizations.json</code> via Leaflet.js.
+          </p>
+        </div>
+
+        <div class="clubs-layout reveal">
+          <!-- Interactive Leaflet Map -->
+          <div class="clubs-map">
+            <div id="clubsMap" style="width:100%;height:100%;min-height:460px;"
+              aria-label="Interactive world map of mountaineering clubs"></div>
+          </div>
+
+          <!-- Organizations List with Hover & Click Binding -->
+          <div class="clubs-list-container">
+            <ul class="clubs-list" id="organizationsList">
+              <!-- Dynamically populated via jQuery $.getJSON -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 10. SEARCH / FILTER RECORDS ================= -->
+    <section class="section" id="records">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-trophy"></i> Historic Milestones</span>
+          <h2 class="section-head">Mountaineering <span>Records &amp; Ascents</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Live search and filter pivotal mountaineering milestones loaded from <code
+              style="color:var(--orange);">records.json</code>.
+          </p>
+        </div>
+
+        <div class="records-filter-bar reveal">
+          <div class="records-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="recordsSearch" placeholder="Search by climber, peak, year, or country...">
+          </div>
+          <div class="records-cat-pills" id="recordFilters">
+            <button type="button" class="record-cat-btn active" data-cat="all">All Records</button>
+            <button type="button" class="record-cat-btn" data-cat="First Ascent">First Ascents</button>
+            <button type="button" class="record-cat-btn" data-cat="Without O2">Without Oxygen</button>
+            <button type="button" class="record-cat-btn" data-cat="Speed">Speed Records</button>
+            <button type="button" class="record-cat-btn" data-cat="Winter">Winter Ascents</button>
+            <button type="button" class="record-cat-btn" data-cat="Women First">Women Firsts</button>
+          </div>
+        </div>
+
+        <div class="records-grid" id="recordsGrid">
+          <!-- Dynamically populated via jQuery $.getJSON -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 18. BEFORE / AFTER ROUTE COMPARISON SLIDER ================= -->
+    <section class="section comparison-section" id="comparisonSection">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-sliders"></i> Visual Condition Analysis</span>
+          <h2 class="section-head">Route Comparison: <span>Summer vs. Winter</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Drag the interactive slider below to compare high-altitude route conditions, snow accumulation, and crevasse
+            bridge stability across seasons.
+          </p>
+        </div>
+
+        <div class="comparison-slider-box reveal" id="routeComparisonSlider">
+          <!-- Summer Image (Underneath) -->
+          <img src="images/1.png" alt="" class="comparison-after">
+          <span class="slider-label label-winter">Winter Snowpack</span>
+
+          <!-- Winter Image (Overlaid with clip-width) -->
+          <div class="comparison-before" id="sliderBeforeClip">
+            <img src="images/6.png" alt="">
+            <span class="slider-label label-summer">Summer Rock Interface</span>
+          </div>
+
+          <!-- Draggable Handle -->
+          <div class="comparison-slider-handle" id="sliderHandle">
+            <div class="slider-handle-button" aria-label="Drag route comparison slider">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 20. EXPEDITION PACKAGES & MODALS ================= -->
+    <section class="section alt" id="packagesSection">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-mountain-city"></i> Curated Itineraries</span>
+          <h2 class="section-head">Featured <span>Expedition Packages</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Comprehensive packages from introductory alpine treks to technical 7,000m summits. Click any package to
+            inspect full itineraries and gear inclusions loaded from <code
+              style="color:var(--orange);">packages.json</code>.
+          </p>
+        </div>
+
+        <div class="packages-grid reveal" id="packagesGrid">
+          <!-- Dynamically populated via jQuery $.getJSON -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. SUCCESS STORIES / TESTIMONIALS SLIDER ================= -->
+    <section class="section testimonials-slider-section" id="testimonialsSection">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-quote-left"></i> Real Experiences</span>
+          <h2 class="section-head">What Our Climbers <span>Say</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Authentic stories from expeditions in the Karakoram, Alps, and Himalaya loaded dynamically from <code
+              style="color:var(--orange);">testimonials.json</code>.
+          </p>
+        </div>
+
+        <div class="slider-carousel-container reveal" id="testimonialsCarousel">
+          <div class="slider-track" id="testimonialTrack">
+            <!-- Dynamically populated via jQuery $.getJSON -->
+          </div>
+
+          <!-- Slider Navigation Arrows & Dots -->
+          <div class="slider-nav-arrows">
+            <button type="button" class="slider-arrow-btn" id="prevTestimonial" aria-label="Previous Testimonial">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="slider-dots" id="testimonialDots"></div>
+            <button type="button" class="slider-arrow-btn" id="nextTestimonial" aria-label="Next Testimonial">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. GALLERY & LIGHTBOX ================= -->
+    <section class="section" id="gallery">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-camera"></i> High Altitude Media</span>
+          <h2 class="section-head">Gallery <span>From The Field</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Stunning imagery and video captured on extreme ridgelines loaded from <code
+              style="color:var(--orange);">gallery.json</code>. Hover for dynamic zoom and click to open the jQuery
+            Lightbox.
+          </p>
+        </div>
+
+        <div class="gallery-grid reveal" id="galleryGrid">
+          <!-- Dynamically populated via jQuery $.getJSON -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 19. ACCORDION FAQ & GUIDELINES ================= -->
+    <section class="section alt" id="faqSection">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-shield-halved"></i> Essential Protocols</span>
+          <h2 class="section-head">Safety Guidelines <span>&amp; FAQ</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Collapsible guidance covering altitude acclimation, mandatory gear, permits, and turnaround rules loaded
+            dynamically from <code style="color:var(--orange);">faq.json</code>.
+          </p>
+        </div>
+
+        <div class="faq-accordion reveal" id="faqAccordion">
+          <!-- Dynamically populated via jQuery $.getJSON -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 21. RATING & REVIEW SYSTEM ================= -->
+    <section class="section" id="reviewsSection">
+      <div class="wrap">
+        <div class="center-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-star"></i> Community Feedback</span>
+          <h2 class="section-head">Climber Ratings <span>&amp; Reviews</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Read genuine reviews or leave your own score. Ratings are computed dynamically and persisted in your browser
+            store.
+          </p>
+        </div>
+
+        <!-- Rating Overview Card -->
+        <div class="reviews-summary-card reveal">
+          <div style="text-align:center;">
+            <div class="reviews-average-number" id="avgRatingScore">4.9</div>
+            <div style="color:#f59e0b;font-size:18px;margin:6px 0;" id="avgRatingStars">★★★★★</div>
+            <small style="color:rgba(255,255,255,0.8);" id="totalReviewCount">Based on 4 verified expeditions</small>
+          </div>
+          <div style="max-width:350px;">
+            <h4 style="color:#fff;margin:0 0 8px;font-size:16px;">Verified Mountaineering Safety</h4>
+            <p style="color:rgba(255,255,255,0.75);font-size:12px;margin:0;">
+              Every review represents real expedition participants who completed climbs under certified Alpine Club and
+              UIAGM supervision.
+            </p>
+          </div>
+        </div>
+
+        <!-- Reviews Grid and Submission Form -->
+        <div class="intro-grid">
+          <div class="reveal">
+            <h3 style="margin-bottom:18px;">Recent Climber Reviews</h3>
+            <div id="reviewsList" style="display:flex;flex-direction:column;gap:15px;">
+              <!-- Dynamically populated from reviews.json + localStorage -->
+            </div>
+          </div>
+
+          <div class="intro-copy reveal">
+            <h3 style="margin-bottom:8px;">Leave Your Review</h3>
+            <p style="font-size:12px;color:var(--muted);margin-bottom:15px;">Share your expedition feedback with fellow
+              climbers.</p>
+
+            <form id="reviewSubmitForm">
+              <label style="font-weight:700;font-size:11px;text-transform:uppercase;">Select Rating</label>
+              <div class="star-picker" id="starPicker">
+                <i class="fa-solid fa-star selected" data-value="1"></i>
+                <i class="fa-solid fa-star selected" data-value="2"></i>
+                <i class="fa-solid fa-star selected" data-value="3"></i>
+                <i class="fa-solid fa-star selected" data-value="4"></i>
+                <i class="fa-solid fa-star selected" data-value="5"></i>
+              </div>
+              <input type="hidden" id="reviewRatingVal" value="5">
+
+              <label for="reviewAuthor"
+                style="font-weight:700;font-size:11px;text-transform:uppercase;margin-top:10px;display:block;">Your
+                Name</label>
+              <input type="text" id="reviewAuthor" required placeholder="Enter Your Name"
+                style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;">
+
+              <label for="reviewExpedition"
+                style="font-weight:700;font-size:11px;text-transform:uppercase;display:block;">Expedition /
+                Route</label>
+              <select id="reviewExpedition"
+                style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;">
+                <option value="K2 Basecamp & Concordia">K2 Basecamp & Concordia</option>
+                <option value="Fairy Meadows & Nanga Parbat">Fairy Meadows & Nanga Parbat</option>
+                <option value="Hunza & Passu Cones">Hunza & Passu Cones</option>
+                <option value="Spantik Peak 7,027m">Spantik Peak 7,027m</option>
+                <option value="Skardu Mountain Trek">Skardu Mountain Trek</option>
+              </select>
+
+              <label for="reviewText"
+                style="font-weight:700;font-size:11px;text-transform:uppercase;display:block;">Your Review</label>
+              <textarea id="reviewText" rows="3" required
+                placeholder="Describe your experience, guides, gear, and mountain challenges..."
+                style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;margin-bottom:15px;"></textarea>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">
+                <i class="fa-solid fa-paper-plane"></i> Submit Review
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRIP EXPENSE CALCULATOR ================= -->
+    <section class="section trip-planner" id="trip-planner">
+      <div class="wrap">
+        <div class="trip-heading reveal" style="text-align:center;">
+          <span class="eyebrow-label"><i class="fa-solid fa-calculator"></i> Smart Trip Planner</span>
+          <h2 class="section-head">Calculate <span>Mountain Expense</span></h2>
+          <p class="section-intro" style="margin-inline:auto;">
+            Select destination, duration, and climbers to see an itemized transport, accommodation, meal, and gear
+            budget.
+          </p>
+        </div>
+
+        <div class="trip-calculator">
+          <div class="trip-form">
+            <h3><i class="fa-solid fa-sliders"></i> Expedition Parameters</h3>
+
+            <label for="tripOrigin"><i class="fa-solid fa-location-crosshairs"
+                style="color:var(--orange);margin-right:4px;"></i> Departure City (Source)</label>
+            <select id="tripOrigin">
+              <option value="islamabad" selected>Islamabad / Rawalpindi (Direct Northern Hub)</option>
+              <option value="lahore">Lahore (+Road / Train Transit)</option>
+              <option value="karachi">Karachi (+Coastal / Long Transit)</option>
+              <option value="faisalabad">Faisalabad / Central Punjab</option>
+              <option value="peshawar">Peshawar / KPK Transit</option>
+              <option value="multan">Multan / South Punjab</option>
+              <option value="international">International Arrival (Airport VIP Protocol)</option>
+            </select>
+
+            <label for="tripDestination"><i class="fa-solid fa-mountain"
+                style="color:var(--orange);margin-right:4px;"></i> Destination Range</label>
+            <select id="tripDestination">
+              <option value="hunza">Hunza Valley (Passu / Karakoram)</option>
+              <option value="skardu">Skardu (K2 / Baltoro Gateway)</option>
+              <option value="murree">Murree & Galiyat</option>
+              <option value="naran">Naran Kaghan & Saif-ul-Malook</option>
+              <option value="swat">Swat Valley (Falak Sar)</option>
+            </select>
+
+            <label for="tripPackage"><i class="fa-solid fa-box-archive"
+                style="color:var(--orange);margin-right:4px;"></i> Expedition Package Tier</label>
+            <select id="tripPackage">
+              <option value="standard">Standard Trekker (Economy Camps / Huts)</option>
+              <option value="comfort" selected>Comfort Alpine (3-Star / Heated Geodesic Tents)</option>
+              <option value="luxury">VIP Extreme Expedition (Deluxe Glamping & Heaters)</option>
+            </select>
+
+            <label for="tripGuideType"><i class="fa-solid fa-user-tie"
+                style="color:var(--orange);margin-right:4px;"></i> Local Guide &amp; Scouting</label>
+            <select id="tripGuideType">
+              <option value="certified" selected>Certified Alpine Guide (ACP / UIAGM)</option>
+              <option value="local">Native High-Altitude Local Scout</option>
+              <option value="team">Full Mountain Lead + Assistant Local Scout</option>
+              <option value="none">Self-Guided (No Guide Support)</option>
+            </select>
+
+            <label for="tripAgeGroup"><i class="fa-solid fa-users" style="color:var(--orange);margin-right:4px;"></i>
+              Primary Age / Group Type</label>
+            <select id="tripAgeGroup">
+              <option value="adult" selected>Standard Adult Party (Full Fitness)</option>
+              <option value="youth">Youth / Students (10% Expedition Discount)</option>
+              <option value="senior">Senior Mountaineers / Gentle Paced Acclimatization</option>
+            </select>
+
+            <label for="tripDays"><i class="fa-regular fa-clock" style="color:var(--orange);margin-right:4px;"></i>
+              Duration</label>
+            <select id="tripDays">
+              <option value="3">3 Days / 2 Nights</option>
+              <option value="4">4 Days / 3 Nights</option>
+              <option value="5" selected>5 Days / 4 Nights</option>
+              <option value="6">6 Days / 5 Nights</option>
+              <option value="7">7 Days / 6 Nights</option>
+            </select>
+
+            <label for="tripTravelers"><i class="fa-solid fa-person-hiking"
+                style="color:var(--orange);margin-right:4px;"></i> Climbers / Travelers</label>
+            <div class="trip-number">
+              <button type="button" id="tripMinus" aria-label="Decrease travelers">−</button>
+              <input type="number" id="tripTravelers" value="4" min="1" max="20">
+              <button type="button" id="tripPlus" aria-label="Increase travelers">+</button>
+            </div>
+
+            <button type="button" class="btn btn-primary trip-calculate" id="tripCalculate" style="margin-top:15px;">
+              <i class="fa-solid fa-calculator"></i> Calculate Expense
+            </button>
+          </div>
+
+          <div class="trip-result" id="tripResult">
+            <div class="trip-result-top">
+              <div>
+                <span>Estimated Budget</span>
+                <h3 id="tripResultName">Hunza Valley</h3>
+                <small id="tripMetaSummary"
+                  style="color:var(--orange);font-weight:700;display:block;margin-top:3px;">From Islamabad • Comfort
+                  Alpine • Certified Guide</small>
+              </div>
+              <div class="trip-result-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+            </div>
+
+            <div class="trip-total">
+              <span>Total Group Expense</span>
+              <strong id="tripTotal">Rs. 156,000</strong>
+              <small id="tripTravelerText">For 4 Travelers</small>
+            </div>
+
+            <div class="trip-breakdown">
+              <div class="trip-breakdown-head">
+                <strong>Expense Breakdown</strong>
+                <span id="tripDurationText">5 Days / 4 Nights</span>
+              </div>
+              <div class="trip-row"><span><i class="fa-solid fa-van-shuttle"></i> 4x4 Mountain Transport</span><strong
+                  id="tripTransport">Rs. 48,000</strong></div>
+              <div class="trip-row"><span><i class="fa-solid fa-plane-departure"></i> Origin / Source
+                  Transit</span><strong id="tripSourceTransit">Rs. 0</strong></div>
+              <div class="trip-row"><span><i class="fa-solid fa-hotel"></i> Alpine Hotel / Camps</span><strong
+                  id="tripHotel">Rs. 56,000</strong></div>
+              <div class="trip-row"><span><i class="fa-solid fa-utensils"></i> High-Calorie Expedition
+                  Food</span><strong id="tripFood">Rs. 28,000</strong></div>
+              <div class="trip-row"><span><i class="fa-solid fa-person-hiking"></i> Guided Treks & Permits</span><strong
+                  id="tripActivities">Rs. 10,000</strong></div>
+              <div class="trip-row"><span><i class="fa-solid fa-user-tie"></i> Local Guide &amp; Scouting</span><strong
+                  id="tripGuide">Rs. 16,000</strong></div>
+              <div class="trip-row"><span><i class="fa-solid fa-compass"></i> Technical Gear Support</span><strong
+                  id="tripEquipment">Rs. 10,000</strong></div>
+              <div class="trip-row"><span><i class="fa-solid fa-kit-medical"></i> Mountain Emergency
+                  Reserve</span><strong id="tripEmergency">Rs. 6,000</strong></div>
+              <div class="trip-row"><span><i class="fa-solid fa-wallet"></i> Environmental & Toll Fees</span><strong
+                  id="tripMisc">Rs. 8,000</strong></div>
+            </div>
+
+            <div class="trip-per-person">
+              <span>Estimated Cost / Person</span>
+              <strong id="tripPerPerson">Rs. 39,000</strong>
+            </div>
+
+            <div style="display:flex;gap:10px;margin-top:15px;">
+              <button type="button" class="estimate-download" id="downloadEstimate" style="flex:1;">
+                <i class="fa-solid fa-download"></i> Download Estimate
+              </button>
+              <button type="button" class="btn btn-primary js-open-wizard" style="flex:1;">
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= 20. EXPEDITION PACKAGE DETAILS MODAL ================= -->
+  <div class="booking-modal" id="packageModal" aria-hidden="true">
+    <div class="booking-overlay" data-close-modal></div>
+    <div class="package-modal-box" role="dialog" aria-modal="true" aria-labelledby="pkgModalTitle">
+      <button type="button" class="booking-close" data-close-modal aria-label="Close package modal">&times;</button>
+      <div id="packageModalContent">
+        <!-- Dynamically filled on package click -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 22 & 12. MULTI-STEP BOOKING WIZARD MODAL ================= -->
+  <div class="booking-modal" id="wizardBookingModal" aria-hidden="true">
+    <div class="booking-overlay" data-close-wizard></div>
+    <div class="booking-box" style="max-width:720px;width:92%;" role="dialog" aria-modal="true"
+      aria-labelledby="wizardTitle">
+      <button type="button" class="booking-close" data-close-wizard aria-label="Close booking wizard">&times;</button>
+      <span class="eyebrow-label"><i class="fa-solid fa-compass"></i> Alpine Ascents Booking Wizard</span>
+      <h2 id="wizardTitle">Book Your <span>Alpine Expedition</span></h2>
+
+      <!-- Wizard Progress Line -->
+      <div class="wizard-progress">
+        <div class="wizard-progress-bar" id="wizardProgressBar"></div>
+        <div class="wizard-step-node active" data-step="1">
+          <div class="step-circle">1</div>
+          <span class="step-label">Personal</span>
+        </div>
+        <div class="wizard-step-node" data-step="2">
+          <div class="step-circle">2</div>
+          <span class="step-label">Expedition</span>
+        </div>
+        <div class="wizard-step-node" data-step="3">
+          <div class="step-circle">3</div>
+          <span class="step-label">Gear</span>
+        </div>
+        <div class="wizard-step-node" data-step="4">
+          <div class="step-circle">4</div>
+          <span class="step-label">Confirm</span>
+        </div>
+      </div>
+
+      <!-- Wizard Form -->
+      <form id="wizardBookingForm" novalidate>
+        <!-- Step 1: Personal Info -->
+        <div class="wizard-step-panel active" id="wizardStep1">
+          <h4 style="margin-bottom:14px;color:var(--navy);">Step 1: Climber Details</h4>
+          <div class="booking-grid">
+            <div>
+              <label for="wizName">Full Name *</label>
+              <input type="text" id="wizName" required placeholder="Enter Your Name">
+              <small class="form-error" id="errWizName" style="color:#ef4444;display:none;">Name is required (min 3
+                chars)</small>
+            </div>
+            <div>
+              <label for="wizEmail">Email Address *</label>
+              <input type="email" id="wizEmail" required placeholder="Enter Your Email">
+              <small class="form-error" id="errWizEmail" style="color:#ef4444;display:none;">Valid email is
+                required</small>
+            </div>
+            <div>
+              <label for="wizPhone">Phone Number *</label>
+              <input type="tel" id="wizPhone" required placeholder="Enter Your Phone Number">
+              <small class="form-error" id="errWizPhone" style="color:#ef4444;display:none;">Valid phone format
+                required</small>
+            </div>
+            <div>
+              <label for="wizOrigin">Departure City</label>
+              <select id="wizOrigin">
+                <option value="Islamabad">Islamabad</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Karachi">Karachi</option>
+                <option value="International">International Arrival</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;margin-top:20px;">
+            <button type="button" class="btn btn-primary" id="btnStep1Next">
+              Next: Expedition Choice <i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Expedition Choice -->
+        <div class="wizard-step-panel" id="wizardStep2">
+          <h4 style="margin-bottom:14px;color:var(--navy);">Step 2: Expedition &amp; Schedule</h4>
+          <div class="booking-grid">
+            <div>
+              <label for="wizExpedition">Selected Route / Peak *</label>
+              <select id="wizExpedition">
+                <option value="Hunza & Fairy Meadows Trek">Hunza &amp; Fairy Meadows Trek (7 Days)</option>
+                <option value="K2 Basecamp & Concordia Trek">K2 Basecamp &amp; Concordia Trek (14 Days)</option>
+                <option value="Spantik Peak 7,027m Expedition">Spantik Peak 7,027m Expedition (24 Days)</option>
+                <option value="Custom Private Expedition">Custom Private Expedition</option>
+              </select>
+            </div>
+            <div>
+              <label for="wizDate">Target Departure Date *</label>
+              <input type="date" id="wizDate" required>
+              <small class="form-error" id="errWizDate" style="color:#ef4444;display:none;">Please choose a departure
+                date</small>
+            </div>
+            <div>
+              <label for="wizClimbers">Climbers in Party</label>
+              <input type="number" id="wizClimbers" min="1" max="20" value="2">
+            </div>
+            <div>
+              <label for="wizSkill">Experience Level</label>
+              <select id="wizSkill">
+                <option value="Beginner Trekker">Beginner Trekker (0-3,500m)</option>
+                <option value="Intermediate Alpine">Intermediate Alpine (3,500m-5,500m)</option>
+                <option value="Advanced 8000er">Advanced / Extreme (6,000m+)</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:20px;">
+            <button type="button" class="btn btn-ghost" id="btnStep2Prev"><i class="fa-solid fa-arrow-left"></i>
+              Previous</button>
+            <button type="button" class="btn btn-primary" id="btnStep2Next">Next: Gear &amp; Add-ons <i
+                class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 3: Gear & Logistics -->
+        <div class="wizard-step-panel" id="wizardStep3">
+          <h4 style="margin-bottom:14px;color:var(--navy);">Step 3: Equipment &amp; Support Add-ons</h4>
+          <div style="display:grid;gap:12px;margin-bottom:15px;">
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+              <input type="checkbox" id="wizGearOxygen" value="Supplementary Oxygen Set">
+              <span>Supplementary Emergency Oxygen Set (+Rs. 45,000)</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+              <input type="checkbox" id="wizGearSat" value="Dedicated Satellite Messenger" checked>
+              <span>Garmin InReach Satellite Messenger Link (Included)</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+              <input type="checkbox" id="wizGearPorter" value="Dedicated Personal High-Altitude Porter">
+              <span>Dedicated Personal High-Altitude Porter (+Rs. 35,000)</span>
+            </label>
+          </div>
+          <label for="wizNotes">Special Medical or Dietary Requirements</label>
+          <textarea id="wizNotes" rows="2"
+            placeholder="Any allergies, altitude medication, or dietary restrictions?"></textarea>
+          <div style="display:flex;justify-content:space-between;margin-top:20px;">
+            <button type="button" class="btn btn-ghost" id="btnStep3Prev"><i class="fa-solid fa-arrow-left"></i>
+              Previous</button>
+            <button type="button" class="btn btn-primary" id="btnStep3Next">Review &amp; Confirm <i
+                class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirmation Summary -->
+        <div class="wizard-step-panel" id="wizardStep4">
+          <h4 style="margin-bottom:14px;color:var(--navy);">Step 4: Review Your Expedition Application</h4>
+          <div
+            style="background:#f7f9ff;border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:20px;"
+            id="wizardSummaryBox">
+            <!-- Dynamically populated before submission -->
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:20px;">
+            <button type="button" class="btn btn-ghost" id="btnStep4Prev"><i class="fa-solid fa-arrow-left"></i>
+              Back</button>
+            <button type="submit" class="btn btn-primary" id="btnSubmitBooking">
+              <i class="fa-solid fa-check"></i> Confirm &amp; Submit Booking
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Success Screen inside Modal -->
+      <div class="booking-success" id="wizardSuccess" hidden>
+        <i class="fa-solid fa-circle-check" style="font-size:48px;color:#10b981;margin-bottom:12px;"></i>
+        <h3>Expedition Booking Recorded!</h3>
+        <p id="wizardSuccessText" style="margin-top:10px;"></p>
+        <button type="button" class="btn btn-primary" data-close-wizard style="margin-top:16px;">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 7. GALLERY LIGHTBOX ================= -->
+  <div id="lightbox" aria-hidden="true">
+    <button id="lightboxClose" class="lightbox-close btn btn-ghost" type="button"
+      aria-label="Close lightbox">&times;</button>
+    <button id="lightboxPrev" class="slider-arrow-btn"
+      style="position:absolute;left:25px;top:50%;transform:translateY(-50%);z-index:10005;"
+      aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <button id="lightboxNext" class="slider-arrow-btn"
+      style="position:absolute;right:25px;top:50%;transform:translateY(-50%);z-index:10005;" aria-label="Next image"><i
+        class="fa-solid fa-chevron-right"></i></button>
+    <div id="lightboxInner"></div>
+    <div id="lightboxCaption"
+      style="position:absolute;bottom:25px;color:#fff;font-family:var(--font-head);font-size:14px;background:rgba(0,0,0,0.65);padding:8px 20px;border-radius:20px;">
+    </div>
+  </div>
+
+  <!-- ================= 28. STICKY FLOATING "BOOK NOW" CTA BUTTON ================= -->
+  <button type="button" class="floating-book-cta js-open-wizard" id="floatingBookCta" aria-label="Book expedition now">
+    <i class="fa-solid fa-mountain"></i> Plan Climb
+  </button>
+
+  <!-- ================= 11. BACK TO TOP BUTTON ================= -->
+  <button type="button" id="backToTop" aria-label="Back to top of page" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ================= FOOTER ================= -->
+ <footer class="footer" id="contact">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <span>ALPINE</span>
+        <strong>ASCENTO</strong>
+      </div>
+
+      <p>
+        We create life-changing experiences taking climbers to the world's
+        most breathtaking ridges with elite safety, passion &amp; professionalism.
+      </p>
+
+      <!-- SOCIAL -->
+      <div class="social-share-bar">
+        <button type="button" class="share-btn share-fb" data-platform="facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </button>
+
+        <button type="button" class="share-btn share-tw" data-platform="twitter">
+          <i class="fa-brands fa-x-twitter"></i>
+        </button>
+
+        <button type="button" class="share-btn share-wa" data-platform="whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+        <button type="button" class="share-btn share-in" data-platform="linkedin">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </button>
+
+        <button type="button" class="share-btn share-copy" id="btnCopyPageLink">
+          <i class="fa-solid fa-link"></i>
+        </button>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-contact">
+        <h5>BASECAMPS CONTACT</h5>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          +92 356 427 879
+        </p>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          expeditions@alpineascento.com
+        </p>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Karakoram Highway, Skardu, Pakistan
+        </p>
+      </div>
+    </div>
+
+
+    <!-- EXPLORE -->
+    <div class="footer-links">
+      <h5>EXPLORE</h5>
+
+      <ul>
+        <li><a href="#Home">Home <span>›</span></a></li>
+        <li><a href="#spaSection">Guide Compendium <span>›</span></a></li>
+        <li><a href="#elevationChartSection">Elevation Analytics <span>›</span></a></li>
+        <li><a href="#clubs">Worldwide Clubs <span>›</span></a></li>
+        <li><a href="#packagesSection">Expedition Packages <span>›</span></a></li>
+        <li><a href="#gallery">Photo &amp; Video <span>›</span></a></li>
+      </ul>
+    </div>
+
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+      <h5>EXPEDITION BULLETINS</h5>
+
+      <p>
+        Subscribe for seasonal Karakoram weather reports and permit updates.
+      </p>
+
+      <div class="subscribe-box">
+        <i class="fa-solid fa-envelope"></i>
+
+        <input
+          type="email"
+          id="emailSubscribe"
+          placeholder="Enter your email"
+        >
+
+        <button type="button" id="btnSubscribe">
+          JOIN <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- BOTTOM -->
+  <!-- <div class="footer-bottom">
+
+    <p>
+      © 2026 Alpine Ascento Guide &amp; Expedition Portal.
+      All Rights Reserved.
+    </p>
+
+    <p class="footer-slogan">
+      Continuous Alpine Adventures. Safer. Higher. Together.
+    </p>
+
+     <button
+      class="back-top"
+      onclick="window.scrollTo({top:0,behavior:'smooth'})"
+      aria-label="Back to top"
+    >
+      ↑
+    </button> 
+
+  </div>
+</footer> -->
+
+  <!-- ================= 1. LIVE CONTINUOUS SCROLLING BOTTOM TICKER (Date, Time, Location) ================= -->
+  <footer class="live-scrolling-ticker" id="bottomTicker" role="region"
+    aria-label="Live Date, Time, and Location Ticker">
+    <div class="ticker-badge-live">
+      <i class="fa-solid fa-satellite-dish"></i> LIVE TICKER
+    </div>
+    <div class="ticker-track-wrapper">
+      <div class="ticker-track" id="tickerTrack">
+        <!-- Dynamically rendered and updated every 1000ms by jQuery -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= THIRD-PARTY VENDOR SCRIPTS ================= -->
+  <!-- jQuery 3.7.1 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Chart.js for Elevation Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Leaflet.js for Interactive Maps -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Main Application Script -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>

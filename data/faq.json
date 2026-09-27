@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "How physically fit do I need to be for a multi-day high-altitude trek?",
+    "answer": "You should have a strong cardiovascular base (running, stair climbing with pack, cycling) and be able to hike 6–8 hours consecutively with a 12–15 kg backpack. Endurance matters far more than maximum muscle bulk. Zone-2 aerobic training for 3 to 6 months prior is strongly recommended."
+  },
+  {
+    "id": 2,
+    "question": "How do your teams prevent and manage Acute Mountain Sickness (AMS)?",
+    "answer": "Our itineraries enforce the proven mountaineering rule: climb high, sleep low, with built-in acclimatization rest days every 1,000 meters above 3,000m. Every guide carries a pulse oximeter, emergency bottled oxygen, a hyperbaric Gamow bag, and satellite SOS transceivers."
+  },
+  {
+    "id": 3,
+    "question": "What personal mountaineering equipment is mandatory versus provided?",
+    "answer": "We provide shared expedition tents, cooking stoves, fixed ropes, snow anchors, satellite comms, and medical kits. You must bring personal base layers, 800-fill down jacket, technical mountaineering boots (crampon-compatible), crampons, ice axe, climbing harness, helmet, and UV400 glacier sunglasses."
+  },
+  {
+    "id": 4,
+    "question": "What environmental and Leave-No-Trace policies must climbers observe?",
+    "answer": "All garbage must be carried down from high camps to designated base camp disposal points under strict Alpine Club of Pakistan regulations. Chemical waste, plastic packaging, and spent canisters are weighed out. We adhere strictly to zero-trace alpine ethics."
+  },
+  {
+    "id": 5,
+    "question": "What is the turnaround rule if weather deteriorates near the summit?",
+    "answer": "Our expedition leads enforce a strict non-negotiable 1:00 PM turnaround time on summit push days, regardless of proximity to the apex. In the mountains, reaching the summit is optional; returning safely to base camp is mandatory."
+  }
+]

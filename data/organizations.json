@@ -1,0 +1,54 @@
+[
+  {
+    "id": "acp",
+    "name": "Alpine Club of Pakistan",
+    "location": "Islamabad, Pakistan",
+    "founded": 1974,
+    "lat": 33.7294,
+    "lng": 73.0931,
+    "zoom": 7,
+    "region": "Karakoram & Western Himalaya",
+    "description": "National governing body managing permits for K2, Nanga Parbat, and the Gasherbrums.",
+    "website": "alpineclub.org.pk",
+    "badge": "Home of K2"
+  },
+  {
+    "id": "tac",
+    "name": "The Alpine Club",
+    "location": "London, United Kingdom",
+    "founded": 1857,
+    "lat": 51.5237,
+    "lng": -0.0827,
+    "zoom": 8,
+    "region": "Global & Historic",
+    "description": "The world's first mountaineering club, founded in London. Pioneer of the Alpine Golden Age.",
+    "website": "alpine-club.org.uk",
+    "badge": "World's Oldest"
+  },
+  {
+    "id": "caf",
+    "name": "Club Alpin Français (FFCAM)",
+    "location": "Chamonix & Paris, France",
+    "founded": 1874,
+    "lat": 45.9237,
+    "lng": 6.8694,
+    "zoom": 9,
+    "region": "Mont Blanc & Alps",
+    "description": "Operates 120+ mountain refuges across the French Alps and Pyrenees.",
+    "website": "ffcam.fr",
+    "badge": "Mont Blanc Gate"
+  },
+  {
+    "id": "nma",
+    "name": "Nepal Mountaineering Association",
+    "location": "Kathmandu, Nepal",
+    "founded": 1973,
+    "lat": 27.7172,
+    "lng": 85.324,
+    "zoom": 8,
+    "region": "Himalaya & Everest",
+    "description": "Administers trekking peaks across Nepal, runs the Mountain Academy.",
+    "website": "nepalmountaineering.org",
+    "badge": "Gateway to Everest"
+  }
+]

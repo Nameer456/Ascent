@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "year": 1953,
+    "peak": "Mount Everest",
+    "elevation": "8,848m",
+    "climber": "Edmund Hillary & Tenzing Norgay",
+    "category": "First Ascent",
+    "country": "Nepal / China",
+    "description": "First confirmed human ascent of the highest point on Earth via the South Col."
+  },
+  {
+    "id": 2,
+    "year": 1954,
+    "peak": "K2 (Godwin-Austen)",
+    "elevation": "8,611m",
+    "climber": "Achille Compagnoni & Lino Lacedelli",
+    "category": "First Ascent",
+    "country": "Pakistan",
+    "description": "First ascent of the Savage Mountain via the Abruzzi Spur."
+  },
+  {
+    "id": 3,
+    "year": 1975,
+    "peak": "Mount Everest",
+    "elevation": "8,848m",
+    "climber": "Junko Tabei",
+    "category": "Women First",
+    "country": "Japan",
+    "description": "Tabei becomes the first woman to summit Everest, overcoming a Camp II avalanche."
+  },
+  {
+    "id": 4,
+    "year": 1978,
+    "peak": "Mount Everest",
+    "elevation": "8,848m",
+    "climber": "Reinhold Messner & Peter Habeler",
+    "category": "Without O2",
+    "country": "Italy / Austria",
+    "description": "First ascent without bottled oxygen, revolutionizing human physiology standards."
+  },
+  {
+    "id": 5,
+    "year": 1986,
+    "peak": "All 14 Eight-Thousanders",
+    "elevation": "8,000m+",
+    "climber": "Reinhold Messner",
+    "category": "Milestone",
+    "country": "Italy",
+    "description": "First climber to conquer all 14 peaks above 8,000 meters entirely without oxygen."
+  },
+  {
+    "id": 6,
+    "year": 2019,
+    "peak": "14 Peaks Speed Record",
+    "elevation": "8,000m+",
+    "climber": "Nirmal Purja (Nimsdai)",
+    "category": "Speed",
+    "country": "Nepal",
+    "description": "Summits all 14 of the world's 8,000m peaks in just 6 months and 6 days."
+  },
+  {
+    "id": 7,
+    "year": 2021,
+    "peak": "K2 Winter Ascent",
+    "elevation": "8,611m",
+    "climber": "Nimsdai Purja & Sherpa Team",
+    "category": "Winter",
+    "country": "Nepal / Pakistan",
+    "description": "Historic first-ever winter summit of K2 in temperatures reaching -55°C."
+  },
+  {
+    "id": 8,
+    "year": 2023,
+    "peak": "14 Peaks World Record",
+    "elevation": "8,000m+",
+    "climber": "Kristin Harila & Tenjen Lama",
+    "category": "Speed",
+    "country": "Norway / Nepal",
+    "description": "Completed all 14 peaks in 92 days, setting a new benchmark in mountaineering."
+  }
+]

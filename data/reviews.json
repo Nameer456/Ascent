@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Hamza Abbasi",
+    "rating": 5,
+    "date": "2026-08-14",
+    "expedition": "K2 Basecamp & Concordia",
+    "review": "The logistical precision of Alpine Ascents was incredible. The guides anticipated weather shifts, the food was hot and nutritious at 4,800m, and the emergency backup protocols gave me total peace of mind."
+  },
+  {
+    "id": 2,
+    "name": "Zainab Chaudhry",
+    "rating": 5,
+    "date": "2026-07-29",
+    "expedition": "Fairy Meadows & Nanga Parbat",
+    "review": "Fabulous experience for an intermediate hiker! The staff were supportive, attentive to hydration and acclimatization pacing, and always kept morale soaring high."
+  },
+  {
+    "id": 3,
+    "name": "David Miller",
+    "rating": 4,
+    "date": "2026-06-18",
+    "expedition": "Hunza & Passu Cones",
+    "review": "Snow conditions turned rough on day 5, but lead guide Hassan rerouted us safely with zero drama. Truly authentic mountain guides who respect safety above all."
+  },
+  {
+    "id": 4,
+    "name": "Ayesha Siddiqui",
+    "rating": 5,
+    "date": "2026-05-10",
+    "expedition": "Skardu Mountain Trek",
+    "review": "The pre-trip briefing and gear checklist were super clear. Loved the interactive planner on the website too — exact budget estimations with no hidden fees."
+  }
+]

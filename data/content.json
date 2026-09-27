@@ -1,0 +1,178 @@
+{
+  "history": {
+    "title": "History of Mountaineering",
+    "subtitle": "From sacred heights to modern lightweight speed ascents",
+    "lead": "Mountaineering began as exploration and science before transforming into one of the purest expressions of human endurance.",
+    "items": [
+      {
+        "era": "The Golden Age (1854 – 1865)",
+        "icon": "fa-landmark",
+        "description": "Pioneering ascents of the Wetterhorn and Matterhorn by Whymper, establishing the first Alpine standards."
+      },
+      {
+        "era": "The Silver Age & Greater Ranges (1865 – 1900s)",
+        "icon": "fa-compass",
+        "description": "Expeditions moved into the Caucasus, Andes, and the giants of the Karakoram and Himalaya."
+      },
+      {
+        "era": "The 8,000-Metre Milestones (1950 – 1964)",
+        "icon": "fa-mountain-sun",
+        "description": "Annapurna fell first in 1950, followed by Everest in 1953 by Hillary & Tenzing, and K2 in 1954."
+      },
+      {
+        "era": "Alpine Style Revolution (1975 – Present)",
+        "icon": "fa-feather",
+        "description": "Messner and Habeler proved summits could be reached without supplemental oxygen in self-contained teams."
+      }
+    ]
+  },
+  "types": {
+    "title": "Styles & Disciplines of Climbing",
+    "subtitle": "How climbers approach the world's most formidable faces",
+    "lead": "Each discipline demands distinct physical conditioning, technical systems, and psychological composure.",
+    "items": [
+      {
+        "title": "Alpine Style",
+        "badge": "Pure & Fast",
+        "icon": "fa-person-hiking",
+        "description": "Climbing with all gear and food in a continuous push without fixed ropes or supplementary oxygen."
+      },
+      {
+        "title": "Expedition / Siege Style",
+        "badge": "High Altitude",
+        "icon": "fa-campground",
+        "description": "Establishing progressive high camps, fixed ropes, and rotating teams to haul supplies up 8,000m peaks."
+      },
+      {
+        "title": "Big Wall Climbing",
+        "badge": "Multi-Day Vertical",
+        "icon": "fa-mountain",
+        "description": "Ascending sheer granite faces over multiple days, sleeping suspended on portable portaledges."
+      },
+      {
+        "title": "Mixed & Ice Climbing",
+        "badge": "Technical Mastery",
+        "icon": "fa-icicles",
+        "description": "Climbing frozen waterfalls and delicate interfaces of verglas, snow, and rock using modern ice tools."
+      },
+      {
+        "title": "Ski Mountaineering (Skimo)",
+        "badge": "High Velocity",
+        "icon": "fa-person-skiing",
+        "description": "Skinning up steep glaciated peaks with skis on pack, followed by a high-commitment descent."
+      }
+    ]
+  },
+  "techniques": {
+    "title": "Technical Progression in Sequence",
+    "subtitle": "The structured order in which mountain craft is mastered",
+    "lead": "Step by step, safety systems and movement discipline work together.",
+    "items": [
+      {
+        "step": "01",
+        "title": "Movement & Precise Footwork",
+        "icon": "fa-shoe-prints",
+        "description": "Centering gravity over footholds, trusting friction on granite, and kicking stable snow buckets."
+      },
+      {
+        "step": "02",
+        "title": "Roping Up & Belaying",
+        "icon": "fa-link",
+        "description": "Tying certified figure-eight knots, constructing equalized multi-point anchors, and dynamic belaying."
+      },
+      {
+        "step": "03",
+        "title": "Active & Passive Protection",
+        "icon": "fa-shield-halved",
+        "description": "Placing cams, hexes, nuts, and ice screws to ensure arresting capacity under severe fall forces."
+      },
+      {
+        "step": "04",
+        "title": "Ice Axe Self-Arrest",
+        "icon": "fa-person-falling",
+        "description": "Driving the adze and pick into snowpack within milliseconds of a slip to prevent momentum buildup."
+      },
+      {
+        "step": "05",
+        "title": "Crevasse Rescue & Hauling",
+        "icon": "fa-life-ring",
+        "description": "Rigging 3:1 Z-pulley or 5:1 complex hauling systems to extract fallen teammates from glacier crevasses."
+      },
+      {
+        "step": "06",
+        "title": "Acclimatization & Pacing",
+        "icon": "fa-heart-pulse",
+        "description": "Applying climb high, sleep low schedules to increase red blood cell count while monitoring SpO2."
+      }
+    ]
+  },
+  "sheltering": {
+    "title": "Sheltering Above the Treeline",
+    "subtitle": "Rest is a vital survival decision as terrain steepens",
+    "lead": "From comfortable European refuges to minimalist hanging portaledges in the Karakoram.",
+    "items": [
+      {
+        "title": "Mountain Huts & Refuges",
+        "icon": "fa-house-chimney-window",
+        "description": "Staffed alpine refuges providing hot broth, bunks, and route intelligence before alpine starts."
+      },
+      {
+        "title": "Base & High Altitude Camps",
+        "icon": "fa-tents",
+        "description": "Geodesic expedition dome tents secured with deadman anchors to withstand 120 km/h storm winds."
+      },
+      {
+        "title": "Snow Caves & Quinzees",
+        "icon": "fa-igloo",
+        "description": "Hand-carved chambers into wind-drifted snow that trap body heat at 0°C during -40°C outside storms."
+      },
+      {
+        "title": "Bivouac Ledges (Bivy)",
+        "icon": "fa-bed",
+        "description": "Minimalist emergency sacks on narrow rock ledges, clipped directly into anchor protection."
+      },
+      {
+        "title": "Suspended Portaledges",
+        "icon": "fa-layer-group",
+        "description": "Engineered aluminum platform cots hanging from a single master point on overhanging big walls."
+      }
+    ]
+  },
+  "hazards": {
+    "title": "Mountain Hazards & Objective Risk",
+    "subtitle": "Recognizing dangers early and having zero hesitation to turn back",
+    "lead": "The mountain makes no compromises. Disciplined safety protocols preserve lives.",
+    "items": [
+      {
+        "title": "Avalanches & Slab Releases",
+        "severity": "Critical",
+        "icon": "fa-burst",
+        "description": "Wind-loaded slabs on 30°–45° slopes. Mitigated with transceivers, probes, shovels, and snowpack pits."
+      },
+      {
+        "title": "Altitude Illness (AMS / HAPE / HACE)",
+        "severity": "Severe",
+        "icon": "fa-lungs",
+        "description": "Hypobaric hypoxia leading to fluid in lungs or brain. Prevented by pacing and immediate descent."
+      },
+      {
+        "title": "Concealed Glacial Crevasses",
+        "severity": "High",
+        "icon": "fa-water",
+        "description": "Chasms masked by fragile snow bridges. Traversed only on roped teams with rescue kits prepared."
+      },
+      {
+        "title": "Serac Collapse & Rockfall",
+        "severity": "High",
+        "icon": "fa-cubes-stacked",
+        "description": "Thermal expansion and shifting ice towers. Avoided by climbing in sub-zero early hours (2 AM starts)."
+      },
+      {
+        "title": "Hypothermia & Frostbite",
+        "severity": "Severe",
+        "icon": "fa-snowflake",
+        "description": "Severe wind chill. Prevented with 800-fill down suits, vapor barrier liners, and high-altitude boots."
+      }
+    ]
+  }
+}

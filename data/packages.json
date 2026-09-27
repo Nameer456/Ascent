@@ -1,0 +1,96 @@
+[
+  {
+    "id": "pkg-beginner",
+    "tier": "Beginner / Intermediate",
+    "badge": "Popular",
+    "title": "Hunza & Fairy Meadows Alpine Trek",
+    "duration": "7 Days / 6 Nights",
+    "elevation": "3,300m Base Camp",
+    "price": "Rs. 65,000",
+    "image": "images/4.png",
+    "description": "Ideal initiation into northern Pakistan alpine trekking. Fairy Meadows reflections of Nanga Parbat, Beyal Camp, and Karakoram Highway.",
+    "itinerary": [
+      "Day 1: Arrival in Islamabad & drive to Chilas via KKH",
+      "Day 2: Raikot Bridge jeep ride and hike to Fairy Meadows",
+      "Day 3: Day hike to Beyal Camp and View Point",
+      "Day 4: Push to Nanga Parbat Base Camp (3,900m)",
+      "Day 5: Transfer to Karimabad & historic Baltit Fort",
+      "Day 6: Attabad Lake boating & Passu Glacier suspension bridge",
+      "Day 7: Scenic return drive to Islamabad"
+    ],
+    "gearIncluded": [
+      "Shared 4-season all-weather tents",
+      "Nutritious mountain meals & mineral water",
+      "Certified alpine trekking guide",
+      "First aid trauma kit & SpO2 monitoring"
+    ],
+    "gearRequired": [
+      "Ankle-support trekking boots",
+      "Fleece layers & thermal innerwear",
+      "UV400 glacier sunglasses & SPF 50+"
+    ]
+  },
+  {
+    "id": "pkg-intermediate",
+    "tier": "Advanced Trekker",
+    "badge": "Glacier Classic",
+    "title": "K2 Basecamp & Concordia Trek",
+    "duration": "14 Days / 13 Nights",
+    "elevation": "5,150m Concordia",
+    "price": "Rs. 185,000",
+    "image": "images/2.png",
+    "description": "The throne room of the mountain gods. Trek the mighty Baltoro Glacier directly to Concordia beneath K2, Broad Peak, and Gasherbrum.",
+    "itinerary": [
+      "Day 1-2: Flight to Skardu, briefing at ACP headquarters",
+      "Day 3: Jeep drive to Askole village",
+      "Day 4-6: Trek along Braldu River: Jhola to Paiju Camp",
+      "Day 7: Acclimatization rest day beneath Trango Towers",
+      "Day 8-10: Stepping onto Baltoro Glacier: Urdukas to Goro II",
+      "Day 11: Grand arrival at Concordia with view of K2",
+      "Day 12: High push to K2 Basecamp (Gilkey Memorial)",
+      "Day 13-14: Return via Ali Camp and Skardu transfer"
+    ],
+    "gearIncluded": [
+      "Insulated high-altitude tents with sleeping mats",
+      "Porters, mountain kitchen crew, mess tent",
+      "Garmin InReach satellite SOS terminal",
+      "Official government peak permits & toll fees"
+    ],
+    "gearRequired": [
+      "-15°C down sleeping bag",
+      "Crampons & microspikes for glaciated ice",
+      "Hard-shell waterproof Gore-Tex outerwear"
+    ]
+  },
+  {
+    "id": "pkg-expert",
+    "tier": "Extreme Mountaineer",
+    "badge": "Peak Summit",
+    "title": "Spantik Peak (Golden Peak) Expedition",
+    "duration": "24 Days / 23 Nights",
+    "elevation": "7,027m Summit Push",
+    "price": "Rs. 420,000",
+    "image": "images/3.png",
+    "description": "A serious 7,000m technical peak in the Spantik-Sosbun Range. Ideal proving ground before tackling 8,000-metre giants.",
+    "itinerary": [
+      "Day 1-3: Skardu equipment inspection, jeep to Arandu",
+      "Day 4-7: Chogolungma Glacier trek to Spantik Basecamp (4,300m)",
+      "Day 8-14: Route fixing & rotations to Camp 1 & 2",
+      "Day 15-18: High Camp 3 establishment (6,200m) & weather window",
+      "Day 19: Summit Push via Southeast Ridge to 7,027m apex",
+      "Day 20-22: Safe descent & environmental cleanup",
+      "Day 23-24: Trek to Arandu & return to Islamabad"
+    ],
+    "gearIncluded": [
+      "Dynamic climbing ropes & snow pickets",
+      "Basecamp satellite link & weather forecast updates",
+      "UIAGM/IFMGA certified guide ratio 1:2",
+      "Emergency supplementary oxygen cylinder at Camp 3"
+    ],
+    "gearRequired": [
+      "Double or triple mountaineering boots (8000m rated)",
+      "Climbing harness, ice axes, jumar ascenders",
+      "800-fill summit down suit & certified helmet"
+    ]
+  }
+]

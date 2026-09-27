@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Mount Everest",
+    "height": 8848,
+    "difficulty": 8.8,
+    "range": "Mahalangur Himalaya",
+    "country": "Nepal / China",
+    "deathRate": "3.5%",
+    "highlight": "Highest point on Earth, Hillary Step bottleneck, Death Zone"
+  },
+  {
+    "name": "K2 (Savage Mountain)",
+    "height": 8611,
+    "difficulty": 9.9,
+    "range": "Karakoram",
+    "country": "Pakistan / China",
+    "deathRate": "23.2%",
+    "highlight": "Steep technical climbing, Bottleneck serac, severe storms"
+  },
+  {
+    "name": "Kangchenjunga",
+    "height": 8586,
+    "difficulty": 9.2,
+    "range": "Eastern Himalaya",
+    "country": "Nepal / India",
+    "deathRate": "19.8%",
+    "highlight": "Extreme isolation, persistent high winds, sacred summit boundary"
+  },
+  {
+    "name": "Nanga Parbat",
+    "height": 8126,
+    "difficulty": 9.7,
+    "range": "Western Himalaya",
+    "country": "Pakistan",
+    "deathRate": "21.6%",
+    "highlight": "4,500m Rupal Face, world's highest wall, sudden blizzards"
+  },
+  {
+    "name": "Annapurna I",
+    "height": 8091,
+    "difficulty": 9.8,
+    "range": "Annapurna Himalaya",
+    "country": "Nepal",
+    "deathRate": "29.4%",
+    "highlight": "Massive avalanche liability, high objective hazard"
+  },
+  {
+    "name": "Broad Peak",
+    "height": 8051,
+    "difficulty": 8,
+    "range": "Karakoram",
+    "country": "Pakistan / China",
+    "deathRate": "6.8%",
+    "highlight": "Long summit ridge, False Summit navigation, Karakoram views"
+  },
+  {
+    "name": "Gasherbrum I",
+    "height": 8080,
+    "difficulty": 8.5,
+    "range": "Karakoram",
+    "country": "Pakistan",
+    "deathRate": "8.5%",
+    "highlight": "Remote Karakoram glacier approach, technical ice couloirs"
+  },
+  {
+    "name": "Mont Blanc",
+    "height": 4809,
+    "difficulty": 6.2,
+    "range": "Graian Alps",
+    "country": "France / Italy",
+    "deathRate": "1.2%",
+    "highlight": "Alpine classic, Grand Couloir rockfall, Goûter refuge"
+  },
+  {
+    "name": "Matterhorn",
+    "height": 4478,
+    "difficulty": 7.5,
+    "range": "Pennine Alps",
+    "country": "Switzerland / Italy",
+    "deathRate": "4.1%",
+    "highlight": "Exposed Hörnli Ridge, sheer pyramidal granite, fixed ropes"
+  }
+]

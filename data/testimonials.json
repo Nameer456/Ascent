@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Jenkins",
+    "role": "High-Altitude Alpinist",
+    "expedition": "K2 Basecamp & Gondogoro La",
+    "avatar": "SJ",
+    "stars": 5,
+    "quote": "Alpine Ascents delivered beyond expectation. The route preparation, acclimatization schedule, and safety equipment in the Karakoram gave our entire expedition absolute confidence.",
+    "year": "2024"
+  },
+  {
+    "id": 2,
+    "name": "Tariq Mahmood",
+    "role": "Expedition Leader",
+    "expedition": "Passu Cones Technical Ascent",
+    "avatar": "TM",
+    "stars": 5,
+    "quote": "The guides understood the mountain conditions down to the hour. When sudden weather rolled in, their instant emergency shelter protocol saved what could have been a desperate night.",
+    "year": "2025"
+  },
+  {
+    "id": 3,
+    "name": "Elena Rostova",
+    "role": "Alpine Photojournalist",
+    "expedition": "Baltoro Glacier 14-Day Traverse",
+    "avatar": "ER",
+    "stars": 5,
+    "quote": "Standing at Concordia surrounded by four 8,000m giants was a lifelong dream. The logistics, hot meals at high camps, and satellite communication were unmatched.",
+    "year": "2025"
+  },
+  {
+    "id": 4,
+    "name": "Marcus Vance",
+    "role": "Mountaineering Instructor",
+    "expedition": "Hunza Technical Ice Camp",
+    "avatar": "MV",
+    "stars": 5,
+    "quote": "The depth of technical knowledge regarding crampon footwork, belaying rigs, and avalanche avoidance was gold-standard. Highly recommended for ambitious climbers.",
+    "year": "2026"
+  }
+]

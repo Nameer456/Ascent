@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Karakoram Ridgeline Ascent",
+    "category": "Expedition",
+    "location": "Gilgit-Baltistan, Pakistan",
+    "image": "images/18.jfif",
+    "full": "images/18.jfif",
+    "video": "images/31.mp4",
+    "caption": "Navigating knife-edge snow arêtes at 6,200m."
+  },
+  {
+    "id": 2,
+    "title": "Summit Dawn over Karakoram",
+    "category": "Summit",
+    "location": "Skardu, Pakistan",
+    "image": "images/34.jpg",
+    "full": "images/34.jpg",
+    "video": "images/35.mp4",
+    "caption": "First golden light touching high altitude peaks."
+  },
+  {
+    "id": 3,
+    "title": "Vertical Granite Face",
+    "category": "Technical",
+    "location": "Trango Towers, Pakistan",
+    "image": "images/36.jpg",
+    "full": "images/36.jpg",
+    "video": "images/37.mp4",
+    "caption": "Aider climbing and crack jams on steep rock."
+  },
+  {
+    "id": 4,
+    "title": "Glacier Traverse & Crevasse Fields",
+    "category": "Ice & Snow",
+    "location": "Baltoro Glacier",
+    "image": "images/33.jpg",
+    "full": "images/33.jpg",
+    "video": "images/30.mp4",
+    "caption": "Roped team negotiating deep glacial fractures."
+  },
+  {
+    "id": 5,
+    "title": "High Camp Under Starlight",
+    "category": "Camp Life",
+    "location": "Concordia, Pakistan",
+    "image": "images/14.jfif",
+    "full": "images/14.jfif",
+    "video": "images/32.mp4",
+    "caption": "Sub-zero bivouac beneath the Milky Way."
+  },
+  {
+    "id": 6,
+    "title": "Ice Fall Technical Route",
+    "category": "Ice & Snow",
+    "location": "Passu Glacier, Hunza",
+    "image": "images/38.jpg",
+    "full": "images/38.jpg",
+    "video": "images/39.mp4",
+    "caption": "Precision crampon placements on vertical ice cascades."
+  },
+  {
+    "id": 7,
+    "title": "Storm Clearing at Basecamp",
+    "category": "Expedition",
+    "location": "Nanga Parbat Diamir Face",
+    "image": "images/41.jpg",
+    "full": "images/41.jpg",
+    "video": "images/40.mp4",
+    "caption": "Watching cloud inversions roll through the high valley."
+  },
+  {
+    "id": 8,
+    "title": "Alpine Push to the Apex",
+    "category": "Summit",
+    "location": "Broad Peak Col",
+    "image": "images/50.avif",
+    "full": "images/50.avif",
+    "video": "images/51.mp4",
+    "caption": "The final 300 vertical meters toward the summit."
+  }
+]
